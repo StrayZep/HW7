@@ -1,0 +1,95 @@
+<!-- 
+Assignment: Using the jQuery UI Slider and Tab Widgets
+ Name:      Zepeng Wang
+ E-mail:    Zepeng_Wang@student.uml.edu
+ Data:      8/10/2020
+ Description: This web is creating an interactive dynamic multiplication table that accept userinput 
+ and calculate from at least -50 to 50 multiplication
+ write a fuction calulation() in js to calculate number in html and put result into table.
+ I used code from hw5 and hw6, I only changed a little bit on this html file.
+              91.61 GUI Programming 1 at UMASS Lowell
+-->
+<!--since we are going to use these code for the future assignment, I made the basic web as simpl
+   as possible-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>interactive dynamic multiplication table</title>
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/HW7.css">
+</head>
+
+
+<!--main part of this web-->
+
+<body>
+
+    <!-- this part is get the input for four var, wwhen user click submit, it the return the value to 
+    calculation() function, the algorithm part is in js -->
+    <!-- for hw7 I changed input to slider, and onclick fuction for save tab and remove all tabs-->
+    <div class="table_content">
+
+        <form onsubmit="return false">
+            <label>Please input the Starting Horizontal Number: </label>
+            <input type="number" name="h_start" id="h_start" value="0" required>
+            <div id="h_start_slider"></div>
+            <label>Please input the Ending Horizontal Number: </label>
+            <input type="number" name="h_end" id="h_end" value="0" required>
+            <div id="h_end_slider"></div>
+            <label>Please input the Starting vertical Number: </label>
+            <input type="number" name="v_start" id="v_start" value="0" required>
+            <div id="v_start_slider"></div>
+            <label>Please input the Ending vertical Number: </label>
+            <input type="number" name="v_end" id="v_end" value="0" required>
+            <div id="v_end_slider"></div><br/>
+            <input type="submit" value="SAVE TABLE" onclick="save_tab()">
+        </form>
+
+        <input type="button" value="REMOVE ALL TABS" onclick="remove_all_tabs()">
+
+        <!--deleted the default value from hw5 -->
+
+        <!-- show the error messages -->
+        <div id="warning_msg"></div>
+    </div>
+
+    <br/>
+    </div>
+    </div>
+
+    <!-- show the multiplication table result -->
+    <div id="mult_table"></div>
+
+    <!-- this is where to insert tables -->
+
+     <!--add tabs class-->
+    <div class="tabs">
+        <ul>
+        </ul>
+    </div>
+    <!-- make bottom more whitespace -->
+    <br /><br />
+
+
+    <!-- link js file. -->
+    <script type='text/javascript' src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type='text/javascript' src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type='text/javascript' src="js/HW7.js"></script>
+
+    <!-- link jQuery Validation plugin -->
+    <!-- <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js">
+    </script>
+    <!--  Source come from:
+    https://jqueryui.com/ 
+    https://jquery.com/
+    https://www.jsdelivr.com/package/npm/jquery-validation  -->
+
+</body>
+
+</html>

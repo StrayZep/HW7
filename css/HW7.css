@@ -1,0 +1,80 @@
+/*Assignment: Using the jQuery UI Slider and Tab Widgets
+ Name:      Zepeng Wang
+ E-mail:    Zepeng_Wang@student.uml.edu
+ Data:      8/10/2020
+ Description: This web is creating an interactive dynamic multiplication table that accept userinput 
+ and calculate from -50 to 50 multiplication
+ write a fuction calulation() in js to calculate number in html and put result into table.
+ https://stackoverflow.com/questions/8854543/calculate-numbers-in-html-table-with-javascript
+
+ all code same as hw5
+ the new stuff for hw6 is just changing error messages color
+ add style config for hw7
+
+              91.61 GUI Programming 1 at UMASS Lowell
+*/
+
+
+/*
+  all codes there are styling the table appearance
+  I made my table looks like exactly what pdf example looks like.
+*/
+
+
+/* make error messages red */
+
+.error {
+    color: red;
+}
+
+tbody>tr>td {
+    border: 3px solid black;
+    color: black;
+    text-align: right;
+}
+
+
+/* make all top elements black */
+
+tbody>tr:first-child>td {
+    box-shadow: 2px white;
+    background-color: black;
+    color: white;
+}
+
+
+/* make all the most left element black. */
+
+tbody>tr>td:first-child {
+    box-shadow: 2px white;
+    background-color: black;
+    color: white;
+}
+
+
+/* make the other elements backgroud white. */
+
+tbody>tr:first-child>td:first-child {
+    box-shadow: 2px white;
+    background-color: white;
+    border: none;
+    color: white;
+}
+
+/*define the position of slider bar*/
+.ui-slider-horizontal {
+    background: white;
+    margin: 15px;
+    width: 450px;
+}
+
+/*change color of slider bar*/
+.ui-slider-horizontal .ui-slider-handle {
+    background: royalblue;
+    border: none;
+}
+
+/*style for tabs*/
+.tabs {
+    min-width: 500px;
+}
